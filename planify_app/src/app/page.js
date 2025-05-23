@@ -1,19 +1,17 @@
 // vår homepage
-
-// vår homepage
 import React from 'react';
 import SearchField from '../Components/searchfield';
-import ActivityList from '../Components/ActivityList';
+import '../Style/Components.css';
+import NavBar from '../Components/navigationbar';
 
 export default function HomePage() {
   return (
     <div className="homepage">
-      <header className="searchbox">
-        <h1>Uttråkad?<br />Låt oss hjälpa dig!</h1>
+      <NavBar/>
+      <main className="searchbox">
+        <h1 className='rubrik1'>Uttråkad?</h1>
+        <h2 className='rubrik2'>Låt oss hjälpa dig!</h2>
         <SearchField />
-      </header>
-      <main>
-        <ActivityList />
       </main>
     </div>
   );
