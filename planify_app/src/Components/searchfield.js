@@ -4,6 +4,7 @@ import React from 'react';
 
 export default function SearchField() {
   return (
+    
     <div className="search-field">
       <input type="text" placeholder="malmö....." />
       <input type="text" placeholder="16-22....." />

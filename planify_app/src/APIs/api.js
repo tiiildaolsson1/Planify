@@ -4,13 +4,12 @@ async function PlacesApi() {
     const response = await fetch("");
     const data = await response.json();
 
-    document.getElementById("").textContent = data.value;
+    return data.value;
 }
 
 async function MasterApi() {
     const response = await fetch("");
     const data = await response.json();
 
-    document.getElementById("").textContent = data.value;
+    return data.value;
 }  
-
