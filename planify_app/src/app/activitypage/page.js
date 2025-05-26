@@ -9,7 +9,7 @@ export default function activityPage() {
     <div className="homepage">
       <NavBar/>
       <main className="List">
-        <h2 className='rubrik3'>rekomenderade aktiviter</h2>
+        <h2 className='rubrik3'>rekomenderade aktiviteter </h2>
         <ActivityCard/>
       </main>
     </div>

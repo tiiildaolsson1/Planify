@@ -7,7 +7,6 @@ import { useRouter } from 'next/navigation';
 import { getUserLocation } from '../APIs/geolocation';
 
 
-
 export default function SearchField() {
   // skapar react state för location, time och age 
   const [location, setLocation] = useState('');
@@ -37,8 +36,23 @@ export default function SearchField() {
   return (
     <form onSubmit={handleSubmit} className="search-field">
       <input value={location} onChange={e => setLocation(e.target.value)} placeholder="Malmö..." />
-      <input value={time} onChange={e => setTime(e.target.value)} placeholder="16-22..." />
-      <input value={age} onChange={e => setAge(e.target.value)} placeholder="20-35 år..." />
+
+      <select value={time} onChange={e => setTime(e.target.value)}>
+        <option value="">Välj tid...</option>
+        <option value="8-14">8.00 - 14.00 </option>
+        <option value="15-20">15.00 -20.00</option>
+        <option value="20-02">20.00 02.00</option>
+      </select>
+
+      <select value={age} onChange={e => setAge(e.target.value)}>
+        <option value="">Välj ålder...</option>
+        <option value="5-10">0-10 år</option>
+        <option value="10-15">10-15 år</option>
+        <option value="15-17">15-17 år</option>
+        <option value="15-17">18+ år</option>
+        <option value="15-17">60+ år</option>
+      </select>
+
       <button type="submit" className="searchbutton">
         <img src="../images/search.svg" alt="Sök" />
       </button>
