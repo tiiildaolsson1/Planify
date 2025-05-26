@@ -1,1 +1,0 @@
-// sidan för att visa korten med aktiviter
