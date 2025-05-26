@@ -56,6 +56,9 @@ body {
 
 }
 .search-field {
+    display: flex; 
+    align-items: center;
+    gap: 10px; 
     width: 808px;
     height: 61px;
     flex-shrink: 0;
@@ -65,14 +68,30 @@ body {
     padding-left: 3%;
 } 
 
-.searchbutton {
-    width: 61px;
-    height: 61px;
-    flex-shrink: 0;
+  .search-field input {
+    flex: 1;
+    border: none;
     border-radius: 8px;
+    padding: 0 10px;
+    height: 40px;
+  }
+  
+  .searchbutton {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
     background: #CCC2E8;
-    color: #21002E;
-}
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .searchbutton img {
+    width: 20px;
+    height: 20px;
+  }
 input {
     color: grey;
 }

@@ -1,15 +1,48 @@
 // vår fina searchfield där de lägger in sina 
 
-import React from 'react';
+"use client";
+
+import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import { getUserLocation } from '../APIs/geolocation';
+
+
 
 export default function SearchField() {
+  // skapar react state för location, time och age 
+  const [location, setLocation] = useState('');
+  const [time, setTime] = useState('');
+  const [age, setAge] = useState('');
+  const router = useRouter();
+
+  // för hindrar standard beteende och validation  
+  const handleSubmit = (e) => {
+    e.preventDefault(); 
+    if (!location && !time && !age) {
+      window.alert("Du måste fylla i minst ett fält!");
+      return;
+    }
+
+    // Skickar användaren till rätt sida när de skickar forumälret
+    const query = new URLSearchParams({ location, time, age }).toString();
+    router.push(`/activitypage?${query}`);
+  };
+
+  // Geolocation för att hämta användarens plats 
+  useEffect(() => {
+    getUserLocation((loc) => setLocation(loc));
+  }, []);
+  
+  // vanligt förumlär som blir vårt sökfält 
   return (
-    // Behövs uppdateras till ett form med onSubmit, gör i rätt bransch
-    <div className="search-field">
-      <input type="text" placeholder="Malmö....." />
-      <input type="text" placeholder="16-22....." />
-      <input type="text" placeholder="20 år - 35 år....." />
-    </div>
-    
+    <form onSubmit={handleSubmit} className="search-field">
+      <input value={location} onChange={e => setLocation(e.target.value)} placeholder="Malmö..." />
+      <input value={time} onChange={e => setTime(e.target.value)} placeholder="16-22..." />
+      <input value={age} onChange={e => setAge(e.target.value)} placeholder="20-35 år..." />
+      <button type="submit" className="searchbutton">
+        <img src="../images/search.svg" alt="Sök" />
+      </button>
+    </form>
   );
 }
+
