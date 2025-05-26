@@ -1,21 +1,20 @@
 // vår navigationsbar som ska återanvändas
 import React from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
 
 
 export default function NavBar() {
   return (
-    <nav>
-      <Link href="/" className='navbar-link'>
-        <Image src="../images/home.svg" alt="Hem" width={30} height={30} />
+    <nav className="navbar">
+      <a href="/" className="navbar-link">
+        <img src="../images/home.svg" alt="Hem" width={30} height={30} />
         <p>Hem</p>
-      </Link>
-      
-      <Link href="/saved" className='navbar-link'>
-        <Image src="../images/heart.svg" alt="Sparade aktiviteter" width={30} height={30} />
+      </a>
+
+      <a href="/saved" className="navbar-link">
+        <img src="../images/heart.svg" alt="Sparade aktiviteter" width={30} height={30} />
         <p>Sparade</p>
-      </Link>
+      </a>
+      <span id='Planify'> Planify </span>
     </nav>
   );
 }
