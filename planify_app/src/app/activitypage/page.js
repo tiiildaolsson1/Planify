@@ -1,18 +1,26 @@
-// sidan för att visa korten med aktiviter
-import React from 'react';
-import '../../Style/Components.css';
-import NavBar from '../../Components/navigationbar';
-import ActivityCard from '../../Components/ActivityCard';
+"use client";
 
-export default function activityPage() {
+import React, { useEffect, useState } from 'react';
+import ActivityCard from '../../Components/ActivityCard';
+import { MasterApi } from '../../APIs/api';
+import NavBar from '../../Components/navigationbar';
+
+export default function ActivityPage() {
+  const [events, setEvents] = useState([]);
+
+  useEffect(() => {
+    const fetchEvents = async () => {
+      const data = await MasterApi('musik'); 
+      setEvents(data);
+    };
+    fetchEvents();
+  }, []);
+
   return (
     <div className="homepage">
       <NavBar/>
-      <main className="List">
-        <h2 className='rubrik3'>rekomenderade aktiviteter </h2>
-        <ActivityCard/>
-      </main>
+      <h2 className='rubrik3'>Rekommenderade aktiviteter</h2>
+      <ActivityCard events={events} />
     </div>
   );
 }
- 

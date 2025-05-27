@@ -49,8 +49,8 @@ export default function SearchField() {
         <option value="5-10">0-10 år</option>
         <option value="10-15">10-15 år</option>
         <option value="15-17">15-17 år</option>
-        <option value="15-17">18+ år</option>
-        <option value="15-17">60+ år</option>
+        <option value="18+ ">18+ år</option>
+        <option value="60+">60+ år</option>
       </select>
 
       <button type="submit" className="searchbutton">
