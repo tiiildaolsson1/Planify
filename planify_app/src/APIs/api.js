@@ -7,9 +7,13 @@ async function PlacesApi() {
     return data.value;
 }
 
-async function MasterApi() {
-    const response = await fetch("");
+export async function MasterApi(query) {
+    const apiKey = process.env.NEXT_PUBLIC_TICKETMASTER_API_KEY;
+; console.log("API KEY:", apiKey); 
+  
+    const url = `https://app.ticketmaster.com/discovery/v2/events.json?apikey=${apiKey}&keyword=${query}&locale=*`;
+    const response = await fetch(url);
     const data = await response.json();
-
-    return data.value;
-}  
+  
+    return data._embedded?.events || [];
+  }
