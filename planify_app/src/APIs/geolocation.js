@@ -17,7 +17,7 @@ export async function getUserLocation(callback) {
         } catch (err) {
           console.warn("Fel vid hämtning av platsnamn:", err);
           callback(`${latitude},${longitude}`);
-        }
+        } 
       },
       (err) => {
         console.warn("Geolocation error:", err.message);
