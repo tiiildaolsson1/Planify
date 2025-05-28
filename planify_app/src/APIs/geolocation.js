@@ -1,16 +1,27 @@
-// args 'callback', Callback körs när vi fått användaren plats. 
-export function getUserLocation(callback) {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          const { latitude, longitude } = position.coords;
-          callback(`${latitude},${longitude}`);
-        }, 
-        (err) => {
-          console.warn("Geolocation error:", err.message);
-        }
-      );
-    }
-  }
   
-// Denna kod är korrekt, men behöver koppla geolocation till google maps api för att få plats istället för koordinater
+export async function getUserLocation(callback) {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+      async (position) => {
+        const { latitude, longitude } = position.coords;
+        console.log("Koordinater:", latitude, longitude);
+
+        try {
+          const url = `https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${latitude}&lon=${longitude}`;
+          const response = await fetch(url);
+          const data = await response.json();
+
+          // Få platsnamnet
+          const placeName = data.display_name || `${latitude},${longitude}`;
+          callback(placeName);
+        } catch (err) {
+          console.warn("Fel vid hämtning av platsnamn:", err);
+          callback(`${latitude},${longitude}`);
+        }
+      },
+      (err) => {
+        console.warn("Geolocation error:", err.message);
+      }
+    );
+  }
+}
