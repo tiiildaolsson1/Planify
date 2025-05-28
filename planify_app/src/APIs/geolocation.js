@@ -13,3 +13,4 @@ export function getUserLocation(callback) {
     }
   }
   
+// Denna kod är korrekt, men behöver koppla geolocation till google maps api för att få plats istället för koordinater

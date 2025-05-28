@@ -1,3 +1,4 @@
+// rör inget, lägg bara ill länkar om vi använder ramverk
 import '../Style/globals.css'; 
 import '../Style/Components.css';
 export default function Layout({ children }) {

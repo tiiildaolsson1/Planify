@@ -7,6 +7,7 @@ async function PlacesApi() {
     return data.value;
 }
 
+// Denna är klar, behöver inte röra
 export async function MasterApi(query) {
     const apiKey = process.env.NEXT_PUBLIC_TICKETMASTER_API_KEY;
 ; console.log("API KEY:", apiKey); 
