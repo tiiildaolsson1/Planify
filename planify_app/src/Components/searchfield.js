@@ -52,13 +52,13 @@ export default function SearchField() {
         placeholder="T.ex. Paris..."
       />
       <select value={time} onChange={e => setTime(e.target.value)}>
-        <option value="">Välj tid...</option>
+        <option value="">Välj tid</option>
         <option value="8-14">8.00 - 14.00</option>
         <option value="15-20">15.00 - 20.00</option>
         <option value="20-02">20.00 - 02.00</option>
       </select>
       <select value={age} onChange={e => setAge(e.target.value)}>
-        <option value="">Välj ålder...</option>
+        <option value="">Välj ålder</option>
         <option value="5-10">0-10 år</option>
         <option value="10-15">10-15 år</option>
         <option value="15-17">15-17 år</option>
