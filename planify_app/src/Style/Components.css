@@ -15,11 +15,6 @@ body {
   line-height: 1.6;
 }
 
-a {
-  text-decoration: none;
-  color: #22b3c1;
-  transition: color 0.3s ease;
-}
 a:hover {
   color: #CCC2E8;
 }
@@ -305,7 +300,10 @@ ul {
   margin: 30px;
 }
 .explore-button:hover {
-  background-color: #CCC2E8;
+  background-color: white;
+  color: black;
+  border: solid black 1px;
+
 }
 
 .map-container iframe {
@@ -380,7 +378,7 @@ select {
 #savedbox { 
   margin-left: 110px !important;
   max-width: 1680px;
-  border: solid #F8C8DC	;
+  border: solid #CCC2E8;
   height: 700px;
 }
 

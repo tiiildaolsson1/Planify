@@ -20,12 +20,7 @@ export default function SavedCalendar() {
   return (
     <div style={{ margin: "30px" }}>
       <h2 className="rubrik3">Kalender med sparade event</h2>
-      <FullCalendar
-        plugins={[dayGridPlugin]}
-        initialView="dayGridMonth"
-        events={events}
-        height="auto"
-      />
+      <FullCalendar plugins={[dayGridPlugin]} initialView="dayGridMonth" events={events} height="auto"/>
     </div>
   );
 }
