@@ -8,7 +8,7 @@ export default function ActivityList() {
       <h3> Kommande aktiviter</h3>
       </section>
       <section id="list2">
-      <h3> övriga aktiviter</h3>
+      <h3> Övriga aktiviter</h3>
       </section>
     </div>
   );

@@ -28,15 +28,13 @@ export async function getNearbyPOIs(lat, lon, radius = 1000) {
     out center;
   `;
 
-    const url = `https://overpass-api.de/api/interpreter?data=${encodeURIComponent(query)}`;
+    const url = `https://overpass-api.de/api/interpreter?data=${(query)}`;
 
     const response = await fetch(url);
     const data = await response.json();
 
     return (data.elements || []).slice(0, 7);
 }
-
-
 
 // Denna är klar, behöver inte röra
 export async function MasterApi(query) {

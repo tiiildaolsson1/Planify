@@ -19,7 +19,7 @@ export default function SearchField() {
 
     try {
       // Hämta lat/lon från OSM
-      const url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(location)}`;
+      const url = `https://nominatim.openstreetmap.org/search?format=json&q=${(location)}`;
       const response = await fetch(url);
       const data = await response.json();
       if (!data.length) {
