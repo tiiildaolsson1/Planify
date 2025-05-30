@@ -66,17 +66,7 @@ export default function SavedPage() {
                   </a>
                 )}
               </div>
-              <button
-                onClick={() => handleDelete(item.id)}
-                style={{
-                  background: "none",
-                  border: "none",
-                  fontSize: "18px",
-                  cursor: "pointer",
-                  color: "#ff3333"
-                }}
-                aria-label="Ta bort aktivitet"
-              >
+              <button onClick={() => handleDelete(item.id)} aria-label="Ta bort aktivitet">
                 <FaTrash />
               </button>
             </li>

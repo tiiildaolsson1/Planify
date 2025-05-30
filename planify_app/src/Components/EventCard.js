@@ -26,14 +26,7 @@ export default function EventCard({ event, onSave }) {
     return (
         <li id="eventboxar">
             {event.images?.[0]?.url && <img src={event.images[0].url} alt={event.name} />}
-            <div
-                className="event-content"
-                style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center"
-                }}
-            >
+            <div className="event-content">
                 <div>
                     <h3>{event.name}</h3>
                     <p>{event.dates.start.localDate}</p>
@@ -41,17 +34,7 @@ export default function EventCard({ event, onSave }) {
                         Mer info
                     </a>
                 </div>
-                <button
-                    onClick={handleSave}
-                    style={{
-                        background: "none",
-                        border: "none",
-                        cursor: "pointer",
-                        color: "#e60073",
-                        fontSize: "20px"
-                    }}
-                    aria-label="Spara event"
-                >
+                <button onClick={handleSave} aria-label="Spara event">
                     {isSaved ? <FaHeart /> : <FaRegHeart />}
                 </button>
             </div>

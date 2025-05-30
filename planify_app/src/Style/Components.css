@@ -37,7 +37,6 @@ ul {
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
   margin-right: 20px;
-
 }
 
 .navbar {
@@ -58,7 +57,6 @@ ul {
   color: #333;
   margin-left: 30px;
   text-decoration: none;
-
 }
 
 #navlinks {
@@ -78,7 +76,6 @@ ul {
   color: black;
   margin-left: 115px;
 }
-
 
 /* Hero / Search Section */
 .my-div {
@@ -100,9 +97,9 @@ ul {
 }
 
 .rubriker {
-   margin-top: 200px; 
-   text-align: center; 
-  }
+  margin-top: 200px; 
+  text-align: center; 
+}
 
 .rubrik3 { 
   margin-bottom: 40px;
@@ -119,7 +116,9 @@ ul {
 }
 
 .searchbox { 
-  position: relative; text-align: center; margin-bottom: 150px; 
+  position: relative; 
+  text-align: center; 
+  margin-bottom: 150px; 
 }
 
 .search-field {
@@ -165,7 +164,6 @@ ul {
   transition: transform 0.2s, box-shadow 0.2s;
   max-width: 800px;
 }
-
 #eventboxar:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
@@ -179,6 +177,9 @@ ul {
 }
 #eventboxar .event-content {
   flex: 1;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
 }
 #eventboxar .event-content h3 {
   margin: 0 0 5px 0;
@@ -204,6 +205,37 @@ ul {
   background-color: #CCC2E8;
 }
 
+/* Extra knappar/stilar */
+.save-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: gray;
+}
+.save-button.saved {
+  color: #e60073;
+}
+
+.poi-icon {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.delete-button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #ff3333;
+}
+
+.saved-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 /* Countries & Map Section */
 .countries-map-section {
   display: flex;
@@ -218,7 +250,6 @@ ul {
 
 .section-desc { 
   margin-left: 105px;
-
 }
 
 .countries-container {
@@ -304,7 +335,7 @@ ul {
 }
 
 .pletter { 
-    text-transform: capitalize;
+  text-transform: capitalize;
 }
 
 .merinfoboxrec { 
