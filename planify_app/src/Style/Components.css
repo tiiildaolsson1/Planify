@@ -32,6 +32,12 @@ img {
 
 ul {
   list-style: none;
+  padding: 20px;
+  background: #f9f9f9; 
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
+  margin-right: 20px;
+
 }
 
 .navbar {
@@ -43,6 +49,7 @@ ul {
   height: 80px;
   background-color: white;
 }
+
 .navbar-link {
   display: flex;
   align-items: center; 
@@ -56,7 +63,7 @@ ul {
 
 #navlinks {
   display: flex;
-  margin-right: 70px;
+  margin-right: 130px;
 }
 
 .navbar-link p {
@@ -69,7 +76,7 @@ ul {
   font-family: 'Poppins', sans-serif;
   font-size: 40px;
   color: black;
-  margin-left: 90px;
+  margin-left: 115px;
 }
 
 
@@ -97,6 +104,11 @@ ul {
    text-align: center; 
   }
 
+.rubrik3 { 
+  margin-bottom: 40px;
+  margin-left: 10px;
+}
+
 .searchbox h1, .searchbox h2 { 
   color: #fff; 
 }
@@ -110,7 +122,7 @@ ul {
   max-width: 1200px;
   border-radius: 12px;
   overflow: hidden;
-  background: #d9d9d9;
+  background: white;
   margin-top: 100px;
 }
 .search-field input {
@@ -146,6 +158,7 @@ ul {
   margin-bottom: 15px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   transition: transform 0.2s, box-shadow 0.2s;
+  max-width: 800px;
 }
 
 #eventboxar:hover {
@@ -209,6 +222,7 @@ ul {
   flex-direction: column;
   gap: 30px;
 }
+
 .country-item {
   display: flex;
   align-items: flex-start;
@@ -263,6 +277,38 @@ ul {
   width: 400px;
   height: 600px;
   margin-top: 30px;
+}
+
+.recommendation-container {
+  display: flex;
+  align-items: flex-start;  
+  gap: 30px;
+  margin: 40px 5%;
+}
+
+.events-section,
+.pois-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;  
+}
+
+#recfix { 
+  margin-bottom: 48px;
+}
+
+.pletter { 
+    text-transform: capitalize;
+}
+
+.merinfoboxrec { 
+  margin-left: 535px;
+  color: black !important;
+}
+
+select { 
+  border-right: solid black 1px;
 }
 
 @media (max-width: 900px) {

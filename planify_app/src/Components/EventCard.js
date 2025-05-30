@@ -16,7 +16,7 @@ export default function EventCard({ event }) {
             <div className="event-content">
                 <h3>{event.name}</h3>
                 <p>{event.dates.start.localDate}</p>
-                <a href={event.url} target="_blank" rel="noopener noreferrer">
+                <a className="merinfoboxrec" href={event.url} target="_blank" rel="noopener noreferrer">
                     Mer info
                 </a>
             </div>

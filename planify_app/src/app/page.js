@@ -34,7 +34,6 @@ export default function HomePage() {
                 <div className="country-stats">
                   <span>👥 10,4M</span>
                   <span>🌍 450 295 KM²</span>
-                  <span>💲 530 000 USD</span>
                 </div>
               </div>
               <a href="#" className="explore-button">Utforska Mer</a>
@@ -49,7 +48,6 @@ export default function HomePage() {
                 <div className="country-stats">
                   <span>👥 45M</span>
                   <span>🌍 190 000 KM²</span>
-                  <span>💲 300 000 USD</span>
                 </div>
               </div>
               <a href="#" className="explore-button">Utforska Mer</a>
@@ -64,8 +62,7 @@ export default function HomePage() {
                 <div className="country-stats">
                   <span>👥 5,7M</span>
                   <span>🌍 10 452 KM²</span>
-                  <span>💲 150 000 USD</span>
-                </div>
+                  </div>
               </div>
               <a href="#" className="explore-button">Utforska Mer</a>
             </div>
@@ -74,7 +71,7 @@ export default function HomePage() {
           {/* Kartsektion */}
           <div className="map-container">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.337943423441!2d2.292292615674722!3d48.85884437928764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66f0aaf6464b7%3A0x40b82c3688c9460!2sEiffeltornet!5e0!3m2!1ssv!2sse!4v1616009046631!5m2!1ssv!2sse"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d144373.82405201567!2d12.704181455027243!3d55.56996701870095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465cb2396d35f0f1%3A0x22b8eba28dad6f62!2sSverige!5e0!3m2!1ssv!2sse!4v1748603173213!5m2!1ssv!2sse"
               width="400"
               height="600"
               style={{ border: 0, borderRadius: "12px" }}
@@ -87,3 +84,4 @@ export default function HomePage() {
     </div >
   );
 }
+

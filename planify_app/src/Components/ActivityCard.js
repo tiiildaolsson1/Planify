@@ -15,7 +15,7 @@ export default function ActivityCard({ events = [] }) {
                 <p>{firstEvent._embedded.venues[0].name}</p>
               )}
               <p>{firstEvent.dates.start.localDate}</p>
-              <a href={firstEvent.url} target="_blank" rel="noopener noreferrer">
+              <a className="merinfoboxrec" href={firstEvent.url} target="_blank" rel="noopener noreferrer">
                 Mer info
               </a>
             </>

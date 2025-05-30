@@ -36,8 +36,6 @@ export async function getNearbyPOIs(lat, lon, radius = 1000) {
     return (data.elements || []).slice(0, 7);
 }
 
-
-
 // Denna är klar, behöver inte röra
 export async function MasterApi(query) {
     const apiKey = process.env.NEXT_PUBLIC_TICKETMASTER_API_KEY;
