@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { FaTrash } from "react-icons/fa";
 import '../../Style/Components.css';
 import NavBar from '../../Components/navigationbar';
+import SavedCalendar from "@/components/SavedCalendar";
 
 export default function SavedPage() {
   const [savedItems, setSavedItems] = useState([]);
@@ -59,7 +60,7 @@ export default function SavedPage() {
               <div className="event-content">
                 <div>
                   <h3>{item.name}</h3>
-                  {item.category && <p>{item.category}</p>}  {/* Flytta in här! */}
+                  {item.category && <p>{item.category}</p>}
                   {item.date && <p>{item.date}</p>}
                   {item.url && (
                     <a href={item.url} target="_blank" rel="noopener noreferrer">
@@ -67,7 +68,6 @@ export default function SavedPage() {
                     </a>
                   )}
                 </div>
-
               </div>
 
               <button onClick={() => handleDelete(item.id)} aria-label="Ta bort aktivitet">
@@ -75,9 +75,11 @@ export default function SavedPage() {
               </button>
             </li>
           ))}
+
+          {filteredItems.length === 0 && <p id="ingaaktiviteter">Inga aktiviteter matchar filtret.</p>}
         </ul>
 
-        {filteredItems.length === 0 && <p>Inga aktiviteter matchar filtret.</p>}
+ 
       </main>
     </div>
   );

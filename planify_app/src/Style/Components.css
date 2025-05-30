@@ -21,7 +21,7 @@ a {
   transition: color 0.3s ease;
 }
 a:hover {
-  color: white;
+  color: #CCC2E8;
 }
 
 img {
@@ -195,14 +195,14 @@ ul {
   display: inline-block;
   padding: 6px 12px;
   background-color: #CCC2E8 ;
-  color: #fff;
+  color: black;
   border-radius: 25px;
   text-decoration: none;
   font-weight: 500;
   transition: background-color 0.3s ease;
 }
 #eventboxar .event-content a:hover {
-  background-color: #CCC2E8;
+  background-color: #F8C8DC;
 }
 
 /* Extra knappar/stilar */
@@ -377,10 +377,15 @@ select {
 
 }
 
-
 #savedbox { 
   margin-left: 110px !important;
   max-width: 1680px;
+  border: solid #F8C8DC	;
+  height: 700px;
+}
+
+#ingaaktiviteter { 
+  font-weight: bold;
 }
 
 @media (max-width: 900px) {
@@ -394,4 +399,19 @@ select {
   .country-item { flex-direction: column; text-align: center; }
   .country-item img { width: 100%; height: auto; }
   .country-info { text-align: center; }
+}
+
+.fc {
+  background: #fff; /* white background for calendar */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+}
+
+.fc-event {
+  background-color: #CCC2E8;
+  border: none;
+  color: #000;
+  padding: 4px 8px;
+  border-radius: 4px;
 }

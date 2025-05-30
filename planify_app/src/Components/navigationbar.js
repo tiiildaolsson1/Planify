@@ -16,6 +16,11 @@ export default function NavBar() {
           <img src="../images/heart.svg" alt="Sparade aktiviteter" width={30} height={30} />
           <p>Sparade</p>
         </a>
+
+        <a href="/calendar" className="navbar-link">
+          <img src="../images/calendar.svg" alt="Kalender" width={30} height={30} />
+          <p>Kalender</p>
+        </a>
       </div>
     </nav>
   );
