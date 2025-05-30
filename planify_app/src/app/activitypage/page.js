@@ -32,9 +32,9 @@ export default function ActivityPage() {
     return "/Images/bag.png";
   };
 
-  // Spara aktivitet till localStorage utan dubletter
   const saveItemToLocalStorage = (item) => {
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
+
     const saved = JSON.parse(localStorage.getItem("savedActivities")) || [];
     const exists = saved.some((s) => s.id === item.id);
     if (!exists) {
