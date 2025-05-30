@@ -62,7 +62,7 @@ export default function HomePage() {
                 <div className="country-stats">
                   <span>👥 5,7M</span>
                   <span>🌍 10 452 KM²</span>
-                  </div>
+                </div>
               </div>
               <a href="#" className="explore-button">Utforska Mer</a>
             </div>

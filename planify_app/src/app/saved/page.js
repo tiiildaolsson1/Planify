@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { FaTrash } from "react-icons/fa"; // 🧼 Importera trash-ikon
+import { FaTrash } from "react-icons/fa";
 import '../../Style/Components.css';
 import NavBar from '../../Components/navigationbar';
 
@@ -42,30 +42,34 @@ export default function SavedPage() {
     <div className="homepage">
       <NavBar />
       <main className="List">
-        <h2 className="rubrik3">Sparade aktiviteter</h2>
+        <h2 id="sparadeaktiviteter" className="rubrik3">Sparade aktiviteter</h2>
 
         {/* Filtermeny */}
         <div style={{ marginBottom: "20px" }}>
-          <button onClick={() => setFilter("all")}>Alla</button>
-          <button onClick={() => setFilter("event")}>Endast event</button>
-          <button onClick={() => setFilter("evening")}>Event på kväll</button>
-          <button onClick={() => setFilter("restaurant")}>Restauranger</button>
-          <button onClick={() => setFilter("cafe")}>Caféer</button>
+          <button className="filter-button" onClick={() => setFilter("all")}>Alla</button>
+          <button className="filter-button" onClick={() => setFilter("event")}>Endast event</button>
+          <button className="filter-button" onClick={() => setFilter("evening")}>Event på kväll</button>
+          <button className="filter-button" onClick={() => setFilter("restaurant")}>Restauranger</button>
+          <button className="filter-button" onClick={() => setFilter("cafe")}>Caféer</button>
         </div>
 
-        <ul>
+        <ul id="savedbox">
           {filteredItems.map((item) => (
             <li id="eventboxar" key={item.id} style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
               <div className="event-content">
-                <h3>{item.name}</h3>
-                {item.date && <p>{item.date}</p>}
-                {item.category && <p>{item.category}</p>}
-                {item.url && (
-                  <a href={item.url} target="_blank" rel="noopener noreferrer">
-                    Mer info
-                  </a>
-                )}
+                <div>
+                  <h3>{item.name}</h3>
+                  {item.category && <p>{item.category}</p>}  {/* Flytta in här! */}
+                  {item.date && <p>{item.date}</p>}
+                  {item.url && (
+                    <a href={item.url} target="_blank" rel="noopener noreferrer">
+                      Mer info
+                    </a>
+                  )}
+                </div>
+
               </div>
+
               <button onClick={() => handleDelete(item.id)} aria-label="Ta bort aktivitet">
                 <FaTrash />
               </button>
