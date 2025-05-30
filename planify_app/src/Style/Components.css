@@ -109,6 +109,11 @@ ul {
   margin-left: 10px;
 }
 
+#recdesign { 
+  margin-bottom: 39px !important;
+  margin-top: 10px;
+}
+
 .searchbox h1, .searchbox h2 { 
   color: #fff; 
 }
