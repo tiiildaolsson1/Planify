@@ -1,14 +1,31 @@
-"use client";
-
-import React from "react";
-import { FaHeart } from "react-icons/fa";
+import React, { useEffect, useState } from "react";
+import { FaHeart, FaRegHeart } from "react-icons/fa";
 
 export default function EventCard({ event, onSave }) {
+    const [isSaved, setIsSaved] = useState(false);
+
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            const saved = JSON.parse(localStorage.getItem("savedActivities")) || [];
+            setIsSaved(saved.some((s) => s.id === event.id));
+        }
+    }, [event.id]);
+
+    const handleSave = () => {
+        onSave({
+            id: event.id,
+            type: "event",
+            name: event.name,
+            date: event.dates.start.localDate,
+            url: event.url,
+            image: event.images?.[0]?.url || ""
+        });
+        setIsSaved(true);
+    };
+
     return (
         <li id="eventboxar">
-            {event.images?.[0]?.url && (
-                <img src={event.images[0].url} alt={event.name} />
-            )}
+            {event.images?.[0]?.url && <img src={event.images[0].url} alt={event.name} />}
             <div
                 className="event-content"
                 style={{
@@ -25,16 +42,7 @@ export default function EventCard({ event, onSave }) {
                     </a>
                 </div>
                 <button
-                    onClick={() =>
-                        onSave({
-                            id: event.id,
-                            type: "event",
-                            name: event.name,
-                            date: event.dates.start.localDate,
-                            url: event.url,
-                            image: event.images?.[0]?.url || ""
-                        })
-                    }
+                    onClick={handleSave}
                     style={{
                         background: "none",
                         border: "none",
@@ -44,7 +52,7 @@ export default function EventCard({ event, onSave }) {
                     }}
                     aria-label="Spara event"
                 >
-                    <FaHeart />
+                    {isSaved ? <FaHeart /> : <FaRegHeart />}
                 </button>
             </div>
         </li>
