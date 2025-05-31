@@ -2,18 +2,22 @@
 
 import React, { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
-import { getEventsNearby, getNearbyPOIs } from "@/APIs/api";
+import { getEventsNearby } from "@/APIs/ticketmaster";
 import NavBar from "@/Components/navigationbar";
 import EventList from "@/Components/EventList";
 import POIList from "@/Components/POIList";
 import "../../Style/Components.css";
+import { getNearbyPOIs } from "@/APIs/api";
 
+
+// Visar aktiviteter och platser nära användarens valda position. 
 export default function ActivityPage() {
   const searchParams = useSearchParams();
   const lat = searchParams.get("lat");
   const lon = searchParams.get("lon");
   const location = searchParams.get("location");
 
+  // State för att lagra hämtade event och POIs
   const [events, setEvents] = useState([]);
   const [pois, setPois] = useState([]);
 
@@ -32,6 +36,7 @@ export default function ActivityPage() {
     return "/Images/bag.png";
   };
 
+  // Funktion för att spara ett objekt till localStorage. 
   const saveItemToLocalStorage = (item) => {
     if (typeof window === "undefined") return;
 
@@ -51,8 +56,8 @@ export default function ActivityPage() {
       <NavBar />
       <main className="List">
         <div className="recommendation-container">
-          <EventList events={events} location={location} onSave={saveItemToLocalStorage} />
-          <POIList pois={pois} getPOIIcon={getPOIIcon} onSave={saveItemToLocalStorage} />
+          <EventList events={events} location={location} onSave={saveItemToLocalStorage}/>
+          <POIList pois={pois} getPOIIcon={getPOIIcon} onSave={saveItemToLocalStorage}/>
         </div>
       </main>
     </div>

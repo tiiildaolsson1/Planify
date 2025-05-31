@@ -6,6 +6,7 @@ import dayGridPlugin from "@fullcalendar/daygrid";
 export default function SavedCalendar() {
   const [events, setEvents] = useState([]);
 
+  // Hämtar sparade aktiviteter från localStorage och filtrerar ut event med datum. 
   useEffect(() => {
     const savedItems = JSON.parse(localStorage.getItem("savedActivities")) || [];
     const formattedEvents = savedItems

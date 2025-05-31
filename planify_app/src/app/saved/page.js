@@ -4,23 +4,26 @@ import React, { useEffect, useState } from "react";
 import { FaTrash } from "react-icons/fa";
 import '../../Style/Components.css';
 import NavBar from '../../Components/navigationbar';
-import SavedCalendar from "@/components/SavedCalendar";
 
+// Sidan där användaren kan se deras sparade events
 export default function SavedPage() {
   const [savedItems, setSavedItems] = useState([]);
   const [filter, setFilter] = useState("all");
 
+  // Hämtar sparade aktiviteter från localStorage
   useEffect(() => {
     const saved = JSON.parse(localStorage.getItem("savedActivities")) || [];
     setSavedItems(saved);
   }, []);
 
+  // Funktion för att ta bort en aktivitet
   const handleDelete = (id) => {
     const updated = savedItems.filter(item => item.id !== id);
     localStorage.setItem("savedActivities", JSON.stringify(updated));
     setSavedItems(updated);
   };
 
+  // Filtrerar listan av sparade aktiviteter beroende på valt filter
   const filteredItems = savedItems.filter((item) => {
     if (filter === "all") return true;
     if (filter === "event") return item.type === "event";
@@ -63,9 +66,7 @@ export default function SavedPage() {
                   {item.category && <p>{item.category}</p>}
                   {item.date && <p>{item.date}</p>}
                   {item.url && (
-                    <a href={item.url} target="_blank" rel="noopener noreferrer">
-                      Mer info
-                    </a>
+                    <a href={item.url} target="_blank" rel="noopener noreferrer">Mer info</a>
                   )}
                 </div>
               </div>
@@ -78,8 +79,6 @@ export default function SavedPage() {
 
           {filteredItems.length === 0 && <p id="ingaaktiviteter">Inga aktiviteter matchar filtret.</p>}
         </ul>
-
- 
       </main>
     </div>
   );

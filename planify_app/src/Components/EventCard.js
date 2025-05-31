@@ -30,9 +30,7 @@ export default function EventCard({ event, onSave }) {
                 <div>
                     <h3>{event.name}</h3>
                     <p>{event.dates.start.localDate}</p>
-                    <a href={event.url} target="_blank" rel="noopener noreferrer">
-                        Mer info
-                    </a>
+                    <a href={event.url} target="_blank" rel="noopener noreferrer">Mer info</a>
                 </div>
                 <button onClick={handleSave} aria-label="Spara event">
                     {isSaved ? <FaHeart /> : <FaRegHeart />}

@@ -1,7 +1,6 @@
-// vår navigationsbar som ska återanvändas
 import React from 'react';
 
-// denna kod hanterar layouten till vår navbar, lägg till här om man vill ändra något
+// Denna kod hanterar layouten till vår navbar, finns med i alla page.js filer. 
 export default function NavBar() {
   return (
     <nav className="navbar">

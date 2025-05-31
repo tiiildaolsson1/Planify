@@ -4,6 +4,7 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
+// Sökfält där användaren kan ange plats, tid och ålder.
 export default function SearchField() {
   const [location, setLocation] = useState('');
   const [time, setTime] = useState('');
@@ -46,11 +47,7 @@ export default function SearchField() {
 
   return (
     <form onSubmit={handleSubmit} className="search-field">
-      <input
-        value={location}
-        onChange={e => setLocation(e.target.value)}
-        placeholder="T.ex. Paris..."
-      />
+      <input value={location} onChange={e => setLocation(e.target.value)} placeholder="T.ex. Paris..."/>
       <select value={time} onChange={e => setTime(e.target.value)}>
         <option value="">Välj tid</option>
         <option value="8-14">8.00 - 14.00</option>

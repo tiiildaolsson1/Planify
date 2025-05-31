@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
 
+// POICard-komponenten visar en plats av intresse (POI - Point of Interest)
 export default function POICard({ poi, onSave, getPOIIcon }) {
+    // State för att hålla reda på om platsen är sparad.
     const [isSaved, setIsSaved] = useState(false);
 
+    // useEffect körs när komponenten mountas eller när platsens id ändras.
+    // kollar även om platsen redan finns sparad i localStorage.
     useEffect(() => {
         if (typeof window !== "undefined") {
             const saved = JSON.parse(localStorage.getItem("savedActivities")) || [];
@@ -11,6 +15,7 @@ export default function POICard({ poi, onSave, getPOIIcon }) {
         }
     }, [poi.id]);
 
+    // Funktion för att spara platsen när användaren klickar på hjärtikonen.
     const handleSave = () => {
         onSave({
             id: poi.id,
@@ -32,8 +37,7 @@ export default function POICard({ poi, onSave, getPOIIcon }) {
                     <p className="pletter">{poi.tags.amenity || poi.tags.tourism || "Sevärdhet"}</p>
                     <a href={`https://www.google.com/maps/search/?api=1&query=${poi.lat},${poi.lon}`} target="_blank" rel="noopener noreferrer">Mer info</a>
                 </div>
-                <button onClick={handleSave} aria-label="Spara plats"
-                >
+                <button onClick={handleSave} aria-label="Spara plats">
                     {isSaved ? <FaHeart /> : <FaRegHeart />}
                 </button>
             </div>

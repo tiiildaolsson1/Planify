@@ -9,7 +9,6 @@ export default function ActivityCard({ events = [] }) {
         <img src="/images/saveheart.svg" alt="Save" className="save-heart" />
         {firstEvent ? (
           <>
-            {/* Detta som gör att musik bingon syns, lägg till så de eve. väljs pga ålder och tid med */}
             <h3>{firstEvent.name}</h3>
             {firstEvent._embedded?.venues && (
               <p>{firstEvent._embedded.venues[0].name}</p>
@@ -23,12 +22,10 @@ export default function ActivityCard({ events = [] }) {
           <h3>aktivitet 1</h3>
         )}
       </section>
-      {/* fortsätt här, tänkte ge de tre olika alternativ, musik, sport och kanske teater? */}
       <section id="list1">
         <img src="/images/saveheart.svg" alt="Save" className="save-heart" />
         <h3>aktivitet 2</h3>
       </section>
-      {/* fortsätt här, tänkte ge de tre olika alternativ, musik, sport och kanske teater? */}
       <section id="list1">
         <img src="/images/saveheart.svg" alt="Save" className="save-heart" />
         <h3>aktivitet 3</h3>
