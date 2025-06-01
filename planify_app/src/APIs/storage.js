@@ -1,1 +1,0 @@
-// localstorage för att spara 
