@@ -52,7 +52,6 @@ export default function SavedPage() {
         <div style={{ marginBottom: "20px" }}>
           <button className="filter-button" onClick={() => setFilter("all")}>Alla</button>
           <button className="filter-button" onClick={() => setFilter("event")}>Endast event</button>
-          <button className="filter-button" onClick={() => setFilter("evening")}>Event på kväll</button>
           <button className="filter-button" onClick={() => setFilter("restaurant")}>Restauranger</button>
           <button className="filter-button" onClick={() => setFilter("cafe")}>Caféer</button>
         </div>

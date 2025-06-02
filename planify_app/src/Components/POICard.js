@@ -7,7 +7,7 @@ export default function POICard({ poi, onSave, getPOIIcon }) {
     const [isSaved, setIsSaved] = useState(false);
 
     // useEffect körs när komponenten mountas eller när platsens id ändras.
-    // kollar även om platsen redan finns sparad i localStorage.
+    // Kollar även om platsen redan finns sparad i localStorage.
     useEffect(() => {
         if (typeof window !== "undefined") {
             const saved = JSON.parse(localStorage.getItem("savedActivities")) || [];
