@@ -35,3 +35,29 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
+Motivation för PLANIFY
+
+Planify är en responsiv webbapplikation som hjälper användare att upptäcka aktiviteter och intressanta platser i närheten av en vald plats. Genom att kombinera data från Ticketmaster API och OpenStreetMap API blir det enkelt för användaren att hitta evenemang och sevärdheter baserat på sin aktuella position eller en plats som användaren anger.
+
+Planify erbjuder flera funktioner:
+Platsbaserad sökning: Användaren kan ange en plats och få förslag på aktiviteter och intressanta platser.
+Visuell placering: Resultaten visas både som lista och direkt på en karta via OpenStreetMap.
+Personlig användarupplevelse: Användaren kan också spara sina favoritaktiviteter och intressepunkter, vilket gör det enkelt att återkomma till dem vid ett senare tillfälle
+.
+Planify använder localStorage för att spara användarens sparade aktiviteter och intressepunkter, vilket gör det enkelt för användaren att återkomma till dessa favoriter vid ett senare tillfälle. All data lagras lokalt i webbläsaren.
+Val av ramverk.
+
+Vi valde att använda React för detta projekt. React är känt för sin flexibilitet och höga prestanda, tack vare dess virtuella DOM och komponentbaserade struktur. Detta gör det enkelt att bygga och vidareutveckla dynamiska och interaktiva användargränssnitt [1]. React har också ett stort och aktivt community som ger stöd och resurser, vilket gör det till ett bra val för långsiktiga projekt.
+Vi valde bort Angular eftersom det är mer komplext och främst används för stora företagsapplikationer. Angular har många inbyggda funktioner och en strikt arkitektur, vilket kan göra det överflödigt och svårare att anpassa för mindre appar som Planify [2].
+Vi valde även bort Vue eftersom det är enklare och ofta används för mindre projekt. Även om Vue är lätt att komma igång med och har en snabb inlärningskurva, erbjuder React större flexibilitet och bättre möjligheter att bygga vidare på en applikation i takt med att den växer [1]. Därför ansåg vi att React är det bästa alternativet för att bygga en modern och skalbar applikation som Planify.
+Sammanfattningsvis valde vi React eftersom det ger en bra balans mellan flexibilitet och hög prestanda. Det gör det möjligt för oss att skapa en responsiv och dynamisk användarupplevelse som Planify.
+
+
+Referenslista 
+
+[1] Veeranjaneyulu Veeri, “Performance Optimization Techniques in React Applications: A Comprehensive Analysis,” ResearchGate, Nov. 2024, doi: https://doi.org/10.5281/zenodo.14146734. 
+
+[2] P. Sekhar Emmanni, “Comparative Analysis of Angular, React, and Vue.js in Single Page Application Development,” International Journal of Science and Research (IJSR), vol. 12, no. 6, pp. 2971–2974, Jun. 2023, doi: https://doi.org/10.21275/sr24401230015. 
+
+
+
