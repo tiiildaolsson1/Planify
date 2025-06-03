@@ -431,7 +431,14 @@ select {
   .country-info {
     text-align: center;
   }
-}
+    .recommendation-container {
+      flex-direction: column;
+    }
+    .events-section, .pois-section {
+    width: 100%;
+  }
+  }
+
 
 .fc {
   background: #fff;

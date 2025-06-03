@@ -36,7 +36,7 @@ export default function HomePage() {
                   <span>🌍 450 295 KM²</span>
                 </div>
               </div>
-              <a href="#" className="explore-button">Utforska Mer</a>
+              <a href="https://sv.wikipedia.org/wiki/Sverige" className="explore-button">Utforska Mer</a>
             </div>
 
             <div className="country-item">
@@ -50,7 +50,7 @@ export default function HomePage() {
                   <span>🌍 190 000 KM²</span>
                 </div>
               </div>
-              <a href="#" className="explore-button">Utforska Mer</a>
+              <a href="https://en.wikipedia.org/wiki/Kurdistan" className="explore-button">Utforska Mer</a>
             </div>
 
             <div className="country-item">
@@ -64,7 +64,7 @@ export default function HomePage() {
                   <span>🌍 10 452 KM²</span>
                 </div>
               </div>
-              <a href="#" className="explore-button">Utforska Mer</a>
+              <a href="https://en.wikipedia.org/wiki/Lebanon" className="explore-button">Utforska Mer</a>
             </div>
           </div>
 
