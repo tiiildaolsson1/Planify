@@ -2,7 +2,9 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-First, run the development server:
+- Skapa en fil i planify_app mappen som heter ".env.local" och lägg sedan in ticketmaster API nyckeln som finns i kommentarerna för projektinlämningen på Canvas! 
+
+Then, run the development server:
 
 ```bash
 npm run dev
