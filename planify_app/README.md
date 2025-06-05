@@ -51,6 +51,8 @@ Platsbaserad sökning:
 - Visuell placering: Resultaten visas både som lista och direkt på en karta via OpenStreetMap.
 - Personlig användarupplevelse: Användaren kan också spara sina favoritaktiviteter och intressepunkter, vilket gör det enkelt att återkomma till dem vid ett senare tillfälle.
 
+Målgruppen för Planify är personer som vill hitta och planera aktiviteter i sitt närområde, t.ex. studenter, turister eller överiga intresserade.
+
 Planify använder localStorage för att spara användarens sparade aktiviteter och intressepunkter, vilket gör det enkelt för användaren att återkomma till dessa favoriter vid ett senare tillfälle. All data lagras lokalt i webbläsaren.
 Val av ramverk.
 
